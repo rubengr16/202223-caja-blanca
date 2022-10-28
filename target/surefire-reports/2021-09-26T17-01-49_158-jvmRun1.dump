@@ -1,0 +1,23 @@
+# Created at 2021-09-26T17:01:49.771
+org.apache.maven.surefire.util.SurefireReflectionException: org.junit.platform.commons.PreconditionViolationException: Cannot create Launcher without at least one TestEngine; consider adding an engine implementation JAR to the classpath
+	at org.apache.maven.surefire.util.ReflectionUtils.instantiateOneArg(ReflectionUtils.java:139)
+	at org.apache.maven.surefire.booter.ForkedBooter.createProviderInCurrentClassloader(ForkedBooter.java:403)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.junit.platform.commons.PreconditionViolationException: Cannot create Launcher without at least one TestEngine; consider adding an engine implementation JAR to the classpath
+	at org.junit.platform.commons.util.Preconditions.condition(Preconditions.java:296)
+	at org.junit.platform.launcher.core.DefaultLauncher.<init>(DefaultLauncher.java:55)
+	at org.junit.platform.launcher.core.LauncherFactory.createDefaultLauncher(LauncherFactory.java:134)
+	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:125)
+	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:109)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.<init>(JUnitPlatformProvider.java:85)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.maven.surefire.util.ReflectionUtils.instantiateOneArg(ReflectionUtils.java:135)
+	... 5 more
+
+
