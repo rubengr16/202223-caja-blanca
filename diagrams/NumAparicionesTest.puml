@@ -1,0 +1,40 @@
+@startuml
+    title NumAparicionesTest\n*A:20, N:15; 20 - 15 + 2 = 7\n*PN:6; 6 + 1 = 7
+    [*] --> inicioLTEZero
+    inicioLTEZero: l107
+    inicioLTEZero --> illegalArg : true
+    illegalArg: l108
+    illegalArg: throws IllegalArgumentException
+    illegalArg --> [*]
+    inicioLTEZero --> finGTSize : false
+    finGTSize: l109
+    finGTSize --> illegalArg2: true
+    illegalArg2: l110
+    illegalArg2: throws IllegalArgumentException
+    illegalArg2 --> [*]
+    finGTSize --> numLineasGTZero: false
+    numLineasGTZero: l115
+    numLineasGTZero --> whileInicioLTEFin: true
+    whileInicioLTEFin: l 116
+    whileInicioLTEFin --> N1: true
+    N1: l117-118
+    N1: Get Lista and pos to 1
+    N1 --> whilePosLTESize
+    whilePosLTESize: l119
+    whilePosLTESize --> N2: true
+    N2: l120
+    N2: Get word
+    N2 --> equalsPalabra: true
+    equalsPalabra: l121-123
+    equalsPalabra --> incrementPos
+    N2 --> incrementPos: false
+    incrementPos: l224
+    incrementPos --> incrementStart
+    incrementStart: 126
+    incrementStart --> whileInicioLTEFin
+    whilePosLTESize --> whileInicioLTEFin: false
+    whileInicioLTEFin --> OK: false
+    numLineasGTZero --> OK: false
+    OK: l129\nreturn count
+    OK --> [*]
+@enduml

@@ -13,7 +13,6 @@ public class Editor {
 	private AbstractSingleLinkedListImpl<AbstractSingleLinkedListImpl<String>> editor;
 	private AbstractSingleLinkedListImpl<String> lista;
 
-	@SuppressWarnings("unchecked")
 	public Editor() {
 		editor = new SingleLinkedListImpl<AbstractSingleLinkedListImpl<String>>();
 	}

@@ -1,0 +1,19 @@
+@startuml
+    title GetLineTest\n*A:8, N:7; 8 - 7 + 2 = 3\n*PN:2; 2 + 1 = 3
+    [*] --> isEmpty
+    isEmpty: l40
+    isEmpty --> empty : true
+    empty: l41-42
+    empty: throws EmptyCollectionException
+    empty --> [*]
+    isEmpty --> lineNum : false
+    lineNum: l43
+    lineNum: lineNum < 0 OR lineNum > size
+    lineNum --> illegalArg: true
+    illegalArg: l44-45
+    illegalArg: throws IllegalArgumentException
+    illegalArg --> [*]
+    lineNum --> OK: false
+    OK: l46\nreturn line
+    OK --> [*]
+@enduml

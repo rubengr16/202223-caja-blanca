@@ -4,3 +4,11 @@ mvn test
 mvn test -Dgroups="add"
 # Ejecutar los test de una clase, por ejemplo la clase AddTest
 mvn test -Dtest=AddTest test
+
+# Diagramas
+*GetLineTest:
+[GetLineTest.puml](diagrams%2FGetLineTest.puml)
+*NumAparicionesTest:
+![NumAparicionesTest.png](diagrams%2FNumAparicionesTest.png)
+*NumPalabrasTest:
+![NumPalabrasTest.png](diagrams%2FNumPalabrasTest.png)

@@ -1,0 +1,35 @@
+@startuml
+    title NumPalabrasTest\n*A:18, N:14; 18 - 14 + 2 = 6\n*PN:5; 5 + 1 = 6
+    [*] --> isEmpty
+    isEmpty: l137
+    isEmpty --> empty : true
+    empty: l139-140
+    empty: throws EmptyCollectionException
+    empty --> [*]
+    isEmpty --> N1 : false
+    N1: l141-143
+    N1: initialize numWords and sizeVar
+    N1 --> sizeVarGTZero: true
+    sizeVarGTZero: l144
+    sizeVarGTZero --> N2: true
+    N2: l145\ninitialize i
+    N2 --> whileIGTESizeVar
+    whileIGTESizeVar: l146
+    whileIGTESizeVar --> N3: true
+    N3: l147\nget line
+    N3 --> FORGetListNEQNull
+    FORGetListNEQNull: l148\niterate through list
+    FORGetListNEQNull --> ifSLenGTZero: true
+    ifSLenGTZero: l149
+    ifSLenGTZero --> N5: true
+    N5: l150\nincrement counter
+    N5 --> FORGetListNEQNull
+    ifSLenGTZero --> FORGetListNEQNull: false
+    FORGetListNEQNull --> N4: false
+    N4: l152\nincrement i
+    N4 --> whileIGTESizeVar
+    whileIGTESizeVar --> OK: false
+    sizeVarGTZero --> OK: false
+    OK: l155\nreturn numWords
+    OK --> [*]
+@enduml
