@@ -7,7 +7,7 @@ mvn test -Dtest=AddTest test
 
 # Diagramas
 *GetLineTest:
-[GetLineTest.puml](diagrams%2FGetLineTest.puml)
+[GetLineTest.puml](diagrams%2FGetLineTest.png)
 *NumAparicionesTest:
 ![NumAparicionesTest.png](diagrams%2FNumAparicionesTest.png)
 *NumPalabrasTest:
